@@ -11,7 +11,7 @@ name: Scheduled Data Gov
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   schedule:
   - cron: "5 8 * * *"
 
