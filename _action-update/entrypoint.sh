@@ -24,9 +24,9 @@ git config --global hub.protocol https
 # Get latest copy of repository
 git clone --no-single-branch "https://${BOT_USER}:${BOT_TOKEN}@github.com/usnistgov/nist-software-scraper.git"
 cd nist-software-scraper
-REPO_ROOT=$(pwd)
+REPO_SCRAPER=$(pwd)
 
-cd $REPO_ROOT
+cd $REPO_SCRAPER
 # Install python dependencies
 pip install -r requirements.txt
 
@@ -46,7 +46,7 @@ OLD_END=$(cat $ACT_LOG_PATH | grep END | cut -f 2)
 OLD_END=$(date --date="$OLD_END" "+%s")
 
 # Run MASTER script
-scraper --config ../nist-software-scraper/nist_config.json
+scraper --config $REPO_SCRAPER/nist_config.json
 
 git add -A .
 
