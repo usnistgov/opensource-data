@@ -26,6 +26,17 @@ git clone --no-single-branch "https://${BOT_USER}:${BOT_TOKEN}@github.com/usnist
 cd nist-software-scraper
 REPO_ROOT=$(pwd)
 
+cd $REPO_ROOT
+# Install python dependencies
+pip install -r requirements.txt
+
+# Build scraper
+python setup.py install
+
+git clone --no-single-branch "https://${BOT_USER}:${BOT_TOKEN}@github.com/usnistgov/opensource.git"
+cd opensource
+REPO_ROOT=$(pwd)
+
 # Checkout data update branch, creating new if necessary
 git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 git merge --no-edit master
@@ -33,13 +44,6 @@ git merge --no-edit master
 # Store previous END timestamp
 OLD_END=$(cat $ACT_LOG_PATH | grep END | cut -f 2)
 OLD_END=$(date --date="$OLD_END" "+%s")
-
-cd $REPO_ROOT
-# Install python dependencies
-pip install -r requirements.txt
-
-# Build scraper
-python setup.py install
 
 # Run MASTER script
 scraper --config nist_config.json
