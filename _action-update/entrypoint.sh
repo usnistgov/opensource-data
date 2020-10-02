@@ -58,6 +58,8 @@ git push origin $BRANCH_NAME
 ### MERGE TO NIST-PAGES
 git checkout nist-pages
 git merge $BRANCH_NAME
+git add -A .
+git commit -m "${DATA_TIMESTAMP} Data Merge to ${BOT_USER}"
 git push origin nist-pages
 
 #push in
