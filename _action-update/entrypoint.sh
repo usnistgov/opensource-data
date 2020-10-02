@@ -46,7 +46,7 @@ OLD_END=$(cat $ACT_LOG_PATH | grep END | cut -f 2)
 OLD_END=$(date --date="$OLD_END" "+%s")
 
 # Run MASTER script
-scraper --config nist_config.json
+scraper --config ../nist-software-scraper/nist_config.json
 
 git add -A .
 
