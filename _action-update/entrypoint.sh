@@ -48,6 +48,8 @@ OLD_END=$(date --date="$OLD_END" "+%s")
 # Run MASTER script
 scraper --config $REPO_SCRAPER/nist_config.json
 
+cp code.json explore/code.json
+
 git add -A .
 
 ### COMMIT UPDATE ###
