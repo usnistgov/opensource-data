@@ -61,7 +61,7 @@ git push origin $BRANCH_NAME
 git checkout nist-pages
 git merge $BRANCH_NAME --strategy-option ours
 git add -A .
-git commit -m "${DATA_TIMESTAMP} Data Merge to ${BOT_USER}"
+#git commit -m "${DATA_TIMESTAMP} Data Merge to ${BOT_USER}"
 git push origin nist-pages
 
 exit 0
