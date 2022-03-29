@@ -65,4 +65,6 @@ git merge $BRANCH_NAME --strategy-option ours
 #git commit -m "${DATA_TIMESTAMP} Data Merge to ${BOT_USER}"
 git push origin nist-pages
 
+# updating to validate fipy meta-data update.
+
 exit 0
