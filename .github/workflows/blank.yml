@@ -11,6 +11,8 @@ name: Scheduled Data Gov
 #  pull_request:
 #    branches: [ master ]
 
+# TRIGGER
+
 on:
   push:
     branches: [ main ]
