@@ -42,8 +42,8 @@ git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 git merge --no-edit master
 
 # Store previous END timestamp
-OLD_END=$(cat $ACT_LOG_PATH | grep END | cut -f 2)
-OLD_END=$(date --date="$OLD_END" "+%s")
+#OLD_END=$(cat $ACT_LOG_PATH | grep END | cut -f 2)
+#OLD_END=$(date --date="$OLD_END" "+%s")
 
 # Run MASTER script
 scraper --config $REPO_SCRAPER/nist_config.json
