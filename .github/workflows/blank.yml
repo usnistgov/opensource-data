@@ -12,12 +12,12 @@ name: Scheduled Data Gov
 #    branches: [ master ]
 
 # RESTART TRIGGER AGAIN 12/17/2024
-
+# Restart Trigger again 03/20/2026
 on:
   push:
     branches: [ main ]
   schedule:
-  - cron: "5 8 * * *"
+  - cron: "39 13 * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
