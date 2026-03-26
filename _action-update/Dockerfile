@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM debian:buster-slim
 
 LABEL "com.github.actions.name"="Run Data Update"
 LABEL "com.github.actions.description"="Run the complete MASTER data update."
