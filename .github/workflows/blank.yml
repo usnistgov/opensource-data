@@ -15,7 +15,7 @@ name: Scheduled Data Gov
 # Restart Trigger again 03/20/2026
 on:
   push:
-    branches: [ main ]
+    branches: [ fix-actions ]
   schedule:
   - cron: "39 13 * * *"
 
